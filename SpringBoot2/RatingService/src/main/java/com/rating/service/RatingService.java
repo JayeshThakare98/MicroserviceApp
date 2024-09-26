@@ -14,10 +14,10 @@ public interface RatingService {
     List<Rating> getRatings();
 
     //get all by UserId
-    List<Rating> getRatingByUserId(String userId);
+    List<Rating> getRatingByUserId(Integer userId);
 
     //get all by hotel
-    List<Rating> getRatingByHotelId(String hotelId);
+    List<Rating> getRatingByHotelId(Integer hotelId);
 
 
 

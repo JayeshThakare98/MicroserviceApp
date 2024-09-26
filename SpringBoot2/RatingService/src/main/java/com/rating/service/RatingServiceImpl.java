@@ -12,25 +12,25 @@ import com.rating.repositry.RatingRepo;
 public class RatingServiceImpl implements RatingService {
 
 	@Autowired
-	private RatingRepo repository;
+	private RatingRepo ratingRepo;
 
 	@Override
 	public Rating create(Rating rating) {
-		return repository.save(rating);
+		return ratingRepo.save(rating);
 	}
 
 	@Override
 	public List<Rating> getRatings() {
-		return repository.findAll();
+		return ratingRepo.findAll();
 	}
 
 	@Override
-	public List<Rating> getRatingByUserId(String userId) {
-		return repository.findByUserId(userId);
+	public List<Rating> getRatingByUserId(Integer userId) {
+		return ratingRepo.findByUserId(userId);
 	}
 
 	@Override
-	public List<Rating> getRatingByHotelId(String hotelId) {
-		return repository.findByHotelId(hotelId);
+	public List<Rating> getRatingByHotelId(Integer hotelId) {
+		return ratingRepo.findByHotelId(hotelId);
 	}
 }
